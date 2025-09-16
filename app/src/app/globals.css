@@ -17,6 +17,13 @@
 /* ===== ESTILOS BASE ===== */
 body {
   @apply bg-slate-900 text-white;
+  /* Prevenir zoom em dispositivos iOS quando focando inputs */
+  -webkit-text-size-adjust: 100%;
+  /* Melhorar renderização de fonte em mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Evitar scroll horizontal */
+  overflow-x: hidden;
 }
 
 /* ===== COMPONENTE DA LOGO ===== */
@@ -52,6 +59,11 @@ body {
 .transition-smooth {
   /* Curva de easing personalizada para transições mais naturais */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Utilitário para melhorar interação touch */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
 }
 
 /* ===== BOTÃO COM GRADIENTE ===== */
